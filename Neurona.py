@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -9,6 +10,7 @@ import matplotlib.pyplot as plt
 df = pd.read_excel('entrenamientomalaria.xlsx')
 
 print(df.head())
+df.isnull().sum()
 
 scaler = StandardScaler()
 x = df.drop(['excess_cases1'], axis=1)
